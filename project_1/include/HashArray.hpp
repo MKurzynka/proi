@@ -1,3 +1,5 @@
+#ifndef HASHARRAY_H
+#define HASHARRAY_H
 #include <vector>
 
 class HashArray
@@ -16,3 +18,4 @@ public:
 	HashArray& operator++();
 	HashArray& operator--();
 };
+#endif // HASHARRAY_H
