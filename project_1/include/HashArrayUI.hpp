@@ -8,5 +8,3 @@ void removeMany(HashArray&);
 void contain(HashArray&);
 void showActionResult(bool);
 std::vector<int> getVector(int);
-
-

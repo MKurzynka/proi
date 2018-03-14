@@ -9,11 +9,10 @@ class HashArray
 public:
 	bool add(int);//True means success (number was not in array)
 	bool add(std::vector<int>);//True means all numbers were added
-	bool remove(int);//True means success (number was in array) 
+	bool remove(int);//True means success (number was in array)
 	bool remove(std::vector<int>);//True means all numbers were removed
 	bool contain(int);
 	void show();
 	HashArray& operator++();
 	HashArray& operator--();
 };
-

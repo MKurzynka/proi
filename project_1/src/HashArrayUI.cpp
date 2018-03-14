@@ -78,7 +78,7 @@ void removeMany(HashArray& arr)
 	cin >> n;
 	showActionResult(arr.remove(getVector(n)));
 }
-void contain(HashArray& arr) 
+void contain(HashArray& arr)
 {
 	int n;
 	cout << "Please enter number you would like to check: ";

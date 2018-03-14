@@ -9,13 +9,13 @@ void HashArray::increase()
 		(*it)++;
 }
 
-void HashArray::decrease() 
+void HashArray::decrease()
 {
 	for (auto it = arr.begin(); it != arr.end(); ++it)
 		(*it)--;
 }
 
-int HashArray::hash(int n) 
+int HashArray::hash(int n)
 {
 	return n % 997;
 }
@@ -73,18 +73,17 @@ void HashArray::show()
 		std::cout << el << std::endl;
 }
 
-HashArray& HashArray::operator++() 
+HashArray& HashArray::operator++()
 {
 	increase();
 	return *this;
 }
 
-HashArray& HashArray::operator--() 
+HashArray& HashArray::operator--()
 {
 	decrease();
 	return *this;
 }
-
 
 
 
