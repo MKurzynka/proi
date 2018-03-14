@@ -1,8 +1,21 @@
+/*
+Maciej Szulik
+293159
+Wiktor Kusmirek
+Project 2(1) - Hash Array based on vector
+*/
+
+//SOURCE FILE FOR: HashArray class methods definitions
+
 #include "../include/HashArray.hpp"
 #include "../include/HashArrayUI.hpp"
 #include <iostream>
 using namespace std;
 
+int HashArray::hash(int n)
+{
+	return n % 997;//simple hashing method
+}
 void HashArray::increase()
 {
 	for (auto it = arr.begin(); it != arr.end(); ++it)
@@ -15,46 +28,41 @@ void HashArray::decrease()
 		(*it)--;
 }
 
-int HashArray::hash(int n)
-{
-	return n % 997;
-}
-
 bool HashArray::add(int n)
 {
-	if (contain(n))
-		return false;
+	if (contain(n))//check if number is in the array
+		return false;//if is -> not add it and return false
 	arr.push_back(hash(n));
 	return true;
 }
 
-bool HashArray::add(std::vector<int> v)
+bool HashArray::add(vector<int> v)
 {
 	bool check_if_all_ok = true;
 	for (auto el : v)
-		if (!add(el))
+		if (!add(el))//if number could not be added -> set temporary variable as false
 			check_if_all_ok = false;
-	return check_if_all_ok;
+	return check_if_all_ok;//if every number was added -> variable is true
 }
 
 bool HashArray::remove(int n) {
 	int tmp_hash = hash(n);
 	for (auto it = arr.begin(); it != arr.end(); ++it)
-		if (*it == tmp_hash)
+		if (*it == tmp_hash)//looking for number to be removed
 		{
 			arr.erase(it);
 			return true;
 		}
-	return false;
+	return false; //number was not found in array
 }
 
-bool HashArray::remove(std::vector<int> v)
+bool HashArray::remove(vector<int> v)
 {
 	bool check_if_all_ok = true;
 	for (auto el : v)
-		if (!remove(el))
+		if (!remove(el))//if some number was not in array -> set variable as false
 			check_if_all_ok = false;
-	return check_if_all_ok;
+	return check_if_all_ok;//if every number was removed -> variable is true
 }
 
 bool HashArray::contain(int n)
@@ -70,7 +78,7 @@ void HashArray::show()
 {
 	cout << "Array contains: " << endl;
 	for (auto el : arr)
-		std::cout << el << std::endl;
+		cout << el << endl;
 }
 
 HashArray& HashArray::operator++()

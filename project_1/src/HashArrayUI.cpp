@@ -1,9 +1,20 @@
+/*
+Maciej Szulik
+293159
+Wiktor Kusmirek
+Project 2(1) - Hash Array based on vector
+*/
+
+//SOURCE FILE FOR: Functions required for handling HashArray class via text UI
+
 #include <iostream>
 #include "../include/HashArray.hpp"
 #include "../include/HashArrayUI.hpp"
 
 using namespace std;
-void showMenu(HashArray& arr)
+
+
+void showMenu(HashArray& arr) //displays possible actions to be made on HashArray passed as parameter
 {
 	int action_choice = 0;
 	while (1)
@@ -51,46 +62,47 @@ void showMenu(HashArray& arr)
 		}
 	}
 }
-void add(HashArray& arr) {
+void add(HashArray& arr) //handles adding one number to array
+{
 	int n;
 	cout << "Please enter number to be added: ";
 	cin >> n;
 	showActionResult(arr.add(n));
 }
-void addMany(HashArray& arr)
+void addMany(HashArray& arr) //handles adding many numbers to array
 {
 	int n;//number of numbers to be added
 	cout << "Please enter how many numbers you would like to add:";
 	cin >> n;
-	showActionResult(arr.add(getVector(n)));
+	showActionResult( arr.add( getVector(n) ) );
 }
-void remove(HashArray& arr)
+void remove(HashArray& arr)//handles removing one number from array
 {
 	int n;
 	cout << "Please enter number to be removed: ";
 	cin >> n;
-	showActionResult(arr.remove(n));
+	showActionResult( arr.remove(n) );
 }
-void removeMany(HashArray& arr)
+void removeMany(HashArray& arr)//handles removing many numbers from array
 {
 	int n;//number of numbers to be removed
 	cout << "Please enter how many numbers you would like to remove:";
 	cin >> n;
-	showActionResult(arr.remove(getVector(n)));
+	showActionResult( arr.remove( getVector(n) ) );
 }
-void contain(HashArray& arr)
+void contain(HashArray& arr)//handles checking if array contains number
 {
 	int n;
 	cout << "Please enter number you would like to check: ";
 	cin >> n;
 	cout << ((arr.contain(n)) ? "HashArray contains this number." : "HashArray does not contain this number.") << endl;
 }
-void showActionResult(bool res)
+void showActionResult(bool res)//handles showing action result when some function returns bool
 {
 	cout << ((res) ? "Operation success." : "Operation failure.") << endl;
 }
 
-vector<int> getVector(int n)
+vector<int> getVector(int n)//handles typing in multiple numbers to be removed or added, n - number of numbers, returns vector of entered numbers
 {
 	vector<int> v;
 	cout << "Enter numbers: ";
