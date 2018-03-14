@@ -1,4 +1,4 @@
-bin/HashArrayApp : build/HashArrayApp.o build/
+bin/HashArrayApp : build/HashArrayApp.o build/HashArray.o build/HashArrayUI.o
 	g++ -std=c++0x build/app.o build/HashArray.o build/HashArrayUI.o -o bin/app.out
 
 build/HashArrayApp.o : src/HashArrayApp.cpp include/HashArrayUI.hpp include/HashArray.hpp
