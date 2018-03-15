@@ -8,7 +8,6 @@ Project 2(1) - Hash Array based on vector
 //SOURCE FILE FOR: HashArray class methods definitions
 
 #include "../include/HashArray.hpp"
-#include "../include/HashArrayUI.hpp"
 #include <iostream>
 using namespace std;
 
