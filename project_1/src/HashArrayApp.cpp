@@ -12,7 +12,7 @@ Project 2(1) - Hash Array based on vector
 
 int main()
 {
-	HashArray arr;
-	showMenu(arr);
+    HashArray arr;
+    showMenu(arr);
     return 0;
 }
