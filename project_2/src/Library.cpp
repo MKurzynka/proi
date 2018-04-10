@@ -25,7 +25,7 @@ void Library::removeItem(int id) {
     std::vector<ItemInterface *>::iterator index = findIteratorByID(id);
     if (index != items_list_.end()) { // index == .end() means the element was not found
         items_list_.erase(index);
-        std::cout<<"Usuwam konkretny element"<<std::endl;   
+        std::cout<<"Usuwam konkeretny element"<<std::endl;   
     }
 }
 
