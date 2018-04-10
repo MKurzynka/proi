@@ -30,7 +30,7 @@ void Library::removeItem(int id) {
 }
 
 int Library::increaseCopies(int id, int n) {
-    ItemInterface *item = findItemByID(id);
+    ItemInterface *item = findItemPointerByID(id);
     if(item==NULL) {
         return -1;
     }
@@ -38,7 +38,7 @@ int Library::increaseCopies(int id, int n) {
 }
 
 int Library::decreaseCopies(int id, int n) {
-    ItemInterface *item = findItemByID(id);
+    ItemInterface *item = findItemPointerByID(id);
     if(item==NULL) {
         return -1;
     }

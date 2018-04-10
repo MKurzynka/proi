@@ -34,6 +34,6 @@ class Library {
         void showItems(std::string name);
         ItemInterface * findItemPointerByID(int id);
         std::vector<ItemInterface *> findItems(std::string name);
-        std::vector<ItemInterface *>::iterator Library::findItemIteratorByID(int id);
+        std::vector<ItemInterface *>::iterator findItemIteratorByID(int id);
 };
 #endif // LIBRARY_H
