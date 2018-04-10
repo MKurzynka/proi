@@ -15,8 +15,6 @@ using namespace std;
 
 LibraryUI(Library* lib) : library_(*lib) {};
 
-~LibraryUI(){};
-
 void LibraryUI::run() {
     int action_choice = 0;
     while (1)
