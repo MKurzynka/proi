@@ -13,7 +13,8 @@ using namespace std;
 
 int main()
 {
-    LibraryUI ui(new Library);
-    ui.run();
+    LibraryUI* ui = new LibraryUI(new Library);
+    ui->run();
+    delte ui;
     return 0;
 }
