@@ -16,20 +16,17 @@ Library::Library() {
 
 Library::~Library() {
     for(auto it = items_list_.begin(); it != items_list_.end(); it++) {
-        removeItem((*it)->getID());
+        delete (*it);
+        std::cout<<"Usuwam w desktruktorze"<<std::endl;
     }
 }
 
 void Library::removeItem(int id) {
-    ItemInterface *item = findItemByID(id);
-    if(item == NULL) {
-        return;
-    }
-    std::vector<ItemInterface *>::iterator index = std::find(items_list_.begin(), items_list_.end(), item);
+    std::vector<ItemInterface *>::iterator index = findIteratorByID(id);
     if (index != items_list_.end()) { // index == .end() means the element was not found
         items_list_.erase(index);
+        std::cout<<"Usuwam konkretny element"<<std::endl;   
     }
-    delete item;
 }
 
 int Library::increaseCopies(int id, int n) {
@@ -62,7 +59,17 @@ void Library::showItems(std::string name) {
     }
 }
 
-ItemInterface* Library::findItemByID(int id) {
+std::vector<ItemInterface*>::iterator Library::findItemIteratorByID(int id) {
+    for(auto it = items_list_.begin(); it != items_list_.end(); it++) {
+          if(id==(*it)->getID()) {
+              return it;
+          }
+    }
+    return items_list_.end();
+}
+
+
+ItemInterface* Library::findItemPointerByID(int id) {
     for(auto it = items_list_.begin(); it != items_list_.end(); it++) {
         if(id==(*it)->getID()) {
             return (*it);
