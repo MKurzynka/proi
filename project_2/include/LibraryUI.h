@@ -22,6 +22,7 @@ class LibraryUI {
       void decreaseCopies();
     public:
         LibraryUI(Library* lib);
+        ~LibraryUI();
         void run();
 };
 
