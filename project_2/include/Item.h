@@ -20,7 +20,7 @@ template <typename T> class Item : public ItemInterface {
         ~Item() {};
         void show(std::ostream& stream) const {
             stream<<"________________________________________________\n";
-            stream<<"ID: "<<id_<<"\nname: "<<name_<<"\nauthor: "<<author_<<"\nNumber of copies: "<<num_of_copies_<<"\nNumber of pages: "<<num_of_pages_<<'\n';
+            stream<<"ID: "<<id_<<"\nname: "<<name_<<"\nauthor: "<<author_<<"\nNumber of copies: "<<num_of_copies_<<"\nNumber of pages: "<<(int)num_of_pages_<<'\n';
         }
 };
 #endif // ITEM_H

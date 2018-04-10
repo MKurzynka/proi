@@ -24,7 +24,7 @@ void LibraryUI::run() {
       cout << "1. Add item" << endl;
       cout << "2. Remove item" << endl;
       cout << "3. Show items" << endl;
-      cout << "4. Find items by name" << endl;
+      cout << "4. Show items by name" << endl;
       cout << "5. Increase number of copies of the book" << endl;
       cout << "6. Decrease number of copies of the book" << endl;
       cin >> action_choice;
@@ -98,7 +98,7 @@ void LibraryUI::increaseCopies() {
     int id, n;
     cout<<"Id: ";
     cin>>id;
-    cout<<"Increase the number of pages by: ";
+    cout<<"Increase the number of copies by: ";
     cin>>n;
     library_.increaseCopies(id,n);
 }
@@ -107,7 +107,7 @@ void LibraryUI::decreaseCopies() {
     int id, n;
     cout<<"Id: ";
     cin>>id;
-    cout<<"Decrease the number of pages by: ";
+    cout<<"Decrease the number of copies by: ";
     cin>>n;
     library_.decreaseCopies(id,n);
 }
