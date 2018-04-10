@@ -16,6 +16,7 @@ using namespace std;
 LibraryUI::LibraryUI(Library* lib) : library_(*lib) {};
 
 LibraryUI::~LibraryUI() {
+  cout<<"Usuwam"<<endl;
   delete &library_;
 }
 void LibraryUI::run() {
