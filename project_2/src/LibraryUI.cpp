@@ -60,14 +60,14 @@ void LibraryUI::run() {
 }
 
 void LibraryUI::show() {
-    library->showItems();
+    library_->showItems();
 }
 
 void LibraryUI::showByName() {
     string name;
     cout<<"Type in a name: ";
     cin>>name;
-    library->showItems(name);
+    library_->showItems(name);
 }
 
 void LibraryUI::addItem() {
@@ -85,9 +85,9 @@ void LibraryUI::addItem() {
     cout<<"Number of pages: ";
     cin>>num_of_pages;
     if(type) {
-        library->addItem<unsigned short int>(name, author, num_of_copies ,num_of_pages);
+        library_->addItem<unsigned short int>(name, author, num_of_copies ,num_of_pages);
     } else {
-        library->addItem<uint8_t>(name, author, num_of_copies, num_of_pages);
+        library_->addItem<uint8_t>(name, author, num_of_copies, num_of_pages);
     }
 }
 
@@ -95,7 +95,7 @@ void LibraryUI::removeItem() {
     int id;
     cout<<"Id: ";
     cin>>id;
-    library->removeItem(id);
+    library_->removeItem(id);
 }
 
 void LibraryUI::increaseCopies() {
@@ -104,7 +104,7 @@ void LibraryUI::increaseCopies() {
     cin>>id;
     cout<<"Increase the number of copies by: ";
     cin>>n;
-    library->increaseCopies(id,n);
+    library_->increaseCopies(id,n);
 }
 
 void LibraryUI::decreaseCopies() {
@@ -113,5 +113,5 @@ void LibraryUI::decreaseCopies() {
     cin>>id;
     cout<<"Decrease the number of copies by: ";
     cin>>n;
-    library->decreaseCopies(id,n);
+    library_->decreaseCopies(id,n);
 }
