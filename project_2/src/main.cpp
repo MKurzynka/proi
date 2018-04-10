@@ -1,3 +1,9 @@
+/*  Maciej Szulik
+    293159
+    Wiktor Kuśmirek
+    Project 2: Library
+*/
+
 #include <iostream>
 #include <LibraryUI.h>
 #include <Library.h>
