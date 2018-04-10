@@ -15,6 +15,6 @@ int main()
 {
     LibraryUI* ui = new LibraryUI(new Library);
     ui->run();
-    delte ui;
+    delete ui;
     return 0;
 }
