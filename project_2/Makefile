@@ -11,7 +11,7 @@ LIB :=
 INC := -I include
 
 $(TARGET): $(OBJECTS)
-	$(CC) $^ -o $(TARGET) $(LIB)
+  @echo " $(CC) $^ -o $(TARGET) $(LIB)"; $(CC) $^ -o $(TARGET) $(LIB)
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
   @mkdir -p $(BUILDDIR)
