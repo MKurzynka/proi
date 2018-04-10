@@ -1,3 +1,10 @@
+/*  
+    Maciej Szulik
+    293159
+    Wiktor Kusmirek
+    Project 2: Library
+*/
+
 #ifndef LIBRARY_H
 #define LIBRARY_H
 
@@ -7,12 +14,11 @@
 #include <vector>
 #include <string>
 
-class Library
-{
-    private:
-        std::vector<ItemInterface *> items_list_ = {};
-        int id = 0;
+class Library {
+        std::vector<ItemInterface *> items_list_;
+        int id;
     public:
+        Library();
         ~Library();
         template <typename T> int addItem(std::string name, std::string author, int num_of_copies, T num_of_pages)
         {

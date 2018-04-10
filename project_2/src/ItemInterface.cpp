@@ -1,6 +1,7 @@
-/*  Maciej Szulik
+/*  
+    Maciej Szulik
     293159
-    Wiktor Kuśmirek
+    Wiktor Kusmirek
     Project 2: Library
 */
 
@@ -10,6 +11,7 @@
 int ItemInterface::getID() const {
     return id_;
 }
+
 std::string ItemInterface::getName() const {
     return name_;
 }
@@ -18,6 +20,7 @@ int ItemInterface::increaseCopies(int n) {
     num_of_copies_ += n;
     return num_of_copies_;
 }
+
 int ItemInterface::decreaseCopies(int n) {
     num_of_copies_ -= n;
     return num_of_copies_;

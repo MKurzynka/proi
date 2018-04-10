@@ -1,11 +1,18 @@
+/*  
+    Maciej Szulik
+    293159
+    Wiktor Kusmirek
+    Project 2: Library
+*/
+
 #ifndef ITEM_H
 #define ITEM_H
+
 #include "ItemInterface.h"
 #include <string>
 #include <iostream>
 
-template <typename T> class Item : public ItemInterface
-{
+template <typename T> class Item : public ItemInterface {
     private:
         T num_of_pages_;
     public:

@@ -1,6 +1,7 @@
-/*  Maciej Szulik
+/*  
+    Maciej Szulik
     293159
-    Wiktor Kuśmirek
+    Wiktor Kusmirek
     Project 2: Library
 */
 

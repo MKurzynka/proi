@@ -1,8 +1,10 @@
-/*  Maciej Szulik
+/*  
+    Maciej Szulik
     293159
-    Wiktor Kuśmirek
+    Wiktor Kusmirek
     Project 2: Library
 */
+
 
 #include "LibraryUI.h"
 #include <iostream>
@@ -11,44 +13,48 @@
 
 using namespace std;
 
+LibraryUI(Library* lib) : library_(*lib) {};
+
+~LibraryUI(){};
+
 void LibraryUI::run() {
     int action_choice = 0;
-	while (1)
-	{
-		cout << "Choose what you would like to do:" << endl;
-		cout << "0. Exit" << endl;
-		cout << "1. Add item" << endl;
-		cout << "2. Remove item" << endl;
-		cout << "3. Show items" << endl;
-		cout << "4. Find items by name" << endl;
-		cout << "5. Increase number of copies of the book" << endl;
-		cout << "6. Decrease number of copies of the book" << endl;
-		cin >> action_choice;
-		switch (action_choice)
-		{
-		case 0:
-			return;
-			break;
-		case 1:
-			addItem();
-			break;
-		case 2:
-			removeItem();
-			break;
-		case 3:
-			show();
-			break;
-		case 4:
-			showByName();
-			break;
-		case 5:
-			increaseCopies();
-			break;
-		case 6:
-			decreaseCopies();
-			break;
-		}
-	}
+    while (1)
+    {
+      cout << "Choose what you would like to do:" << endl;
+      cout << "0. Exit" << endl;
+      cout << "1. Add item" << endl;
+      cout << "2. Remove item" << endl;
+      cout << "3. Show items" << endl;
+      cout << "4. Find items by name" << endl;
+      cout << "5. Increase number of copies of the book" << endl;
+      cout << "6. Decrease number of copies of the book" << endl;
+      cin >> action_choice;
+      switch (action_choice)
+      {
+      case 0:
+        return;
+        break;
+      case 1:
+        addItem();
+        break;
+      case 2:
+        removeItem();
+        break;
+      case 3:
+        show();
+        break;
+      case 4:
+        showByName();
+        break;
+      case 5:
+        increaseCopies();
+        break;
+      case 6:
+        decreaseCopies();
+        break;
+      }
+    }
 }
 
 void LibraryUI::show() {
@@ -76,8 +82,7 @@ void LibraryUI::addItem() {
     cin>>num_of_copies;
     cout<<"Number of pages: ";
     cin>>num_of_pages;
-    if(type)
-    {
+    if(type) {
         library_.addItem<unsigned short int>(name, author, num_of_copies ,num_of_pages);
     } else {
         library_.addItem<uint8_t>(name, author, num_of_copies, num_of_pages);

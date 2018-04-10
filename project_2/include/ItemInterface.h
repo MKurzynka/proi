@@ -1,11 +1,17 @@
+/*  
+    Maciej Szulik
+    293159
+    Wiktor Kusmirek
+    Project 2: Library
+*/
+
 #ifndef ITEMINTERFACE_H
 #define ITEMINTERFACE_H
 
 #include <string>
 #include <iostream>
 
-class ItemInterface
-{
+class ItemInterface {
     protected:
         int id_;
         std::string name_;

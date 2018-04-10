@@ -1,16 +1,21 @@
-/*  Maciej Szulik
+/*  
+    Maciej Szulik
     293159
-    Wiktor Kuśmirek
+    Wiktor Kusmirek
     Project 2: Library
 */
+
 
 #include "Library.h"
 #include <iostream>
 #include <algorithm>
 
+Library::Library() {
+  id=0;
+}
 
 Library::~Library() {
- for(auto it = items_list_.begin(); it != items_list_.end(); it++) {
+    for(auto it = items_list_.begin(); it != items_list_.end(); it++) {
         removeItem((*it)->getID());
     }
 }

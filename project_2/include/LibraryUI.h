@@ -1,11 +1,18 @@
+/*  
+    Maciej Szulik
+    293159
+    Wiktor Kusmirek
+    Project 2: Library
+*/
+
+
 #ifndef LIBRARYUI_H
 #define LIBRARYUI_H
 
 #include <string>
 #include "Library.h"
 
-class LibraryUI
-{
+class LibraryUI {
     Library& library_;
     void show();
     void showByName();
@@ -14,8 +21,8 @@ class LibraryUI
     void increaseCopies();
     void decreaseCopies();
     public:
-        LibraryUI(Library* lib) : library_(*lib){};
-        ~LibraryUI(){};
+        LibraryUI(Library* lib);
+        ~LibraryUI();
         void run();
 };
 
