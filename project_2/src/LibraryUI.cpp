@@ -13,7 +13,7 @@
 
 using namespace std;
 
-LibraryUI(Library* lib) : library_(*lib) {};
+LibraryUI::LibraryUI(Library* lib) : library_(*lib) {};
 
 void LibraryUI::run() {
     int action_choice = 0;
