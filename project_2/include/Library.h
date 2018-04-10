@@ -32,7 +32,7 @@ class Library {
         int decreaseCopies(int id, int n);
         void showItems();
         void showItems(std::string name);
-        ItemInterface * findItemByID(int id);
+        ItemInterface * findItemPointerByID(int id);
         std::vector<ItemInterface *> findItems(std::string name);
         std::vector<ItemInterface *>::iterator Library::findItemIteratorByID(int id);
 };
