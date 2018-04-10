@@ -1,4 +1,3 @@
-
 CC := g++
 SRCDIR := src
 BUILDDIR := build
@@ -12,7 +11,7 @@ LIB :=
 INC := -I include
 
 $(TARGET): $(OBJECTS)
-  @echo " $(CC) $^ -o $(TARGET) $(LIB)"; $(CC) $^ -o $(TARGET) $(LIB)
+	$(CC) $^ -o $(TARGET) $(LIB)
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
   @mkdir -p $(BUILDDIR)
