@@ -13,13 +13,13 @@
 #include "Library.h"
 
 class LibraryUI {
-    Library& library_;
-    void show();
-    void showByName();
-    void addItem();
-    void removeItem();
-    void increaseCopies();
-    void decreaseCopies();
+      Library& library_;
+      void show();
+      void showByName();
+      void addItem();
+      void removeItem();
+      void increaseCopies();
+      void decreaseCopies();
     public:
         LibraryUI(Library* lib);
         void run();
