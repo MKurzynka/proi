@@ -13,7 +13,7 @@
 #include "Library.h"
 
 class LibraryUI {
-      Library& library_;
+      Library* library_;
       void show();
       void showByName();
       void addItem();
