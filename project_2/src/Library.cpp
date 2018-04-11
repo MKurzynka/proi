@@ -9,9 +9,7 @@
 #include "Library.h"
 #include <iostream>
 
-Library::Library() {
-   id=0;
-}
+Library::Library() : id_(0) {}
 
 Library::~Library() {
     for(auto it = items_list_.begin(); it != items_list_.end(); it++) {
@@ -29,7 +27,7 @@ void Library::removeItem(int id) {
 int Library::increaseCopies(int id, int n) {
     ItemInterface *item = findItemPointerByID(id);
     if(item==NULL) {
-        return -1;
+        return -1; // no item found
     }
     return (*item)+n;
 }
@@ -37,7 +35,7 @@ int Library::increaseCopies(int id, int n) {
 int Library::decreaseCopies(int id, int n) {
     ItemInterface *item = findItemPointerByID(id);
     if(item==NULL) {
-        return -1;
+        return -1; // no item found
     }
     return (*item)-n;
 }
