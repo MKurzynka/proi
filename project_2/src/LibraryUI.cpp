@@ -13,12 +13,9 @@
 
 using namespace std;
 
-LibraryUI::LibraryUI(Library* lib) : library_(lib) {};
+LibraryUI::LibraryUI(Library& lib) : library_(lib) {};
 
-LibraryUI::~LibraryUI() {
-  cout<<"Usuwam"<<endl;
-  delete library_;
-}
+LibraryUI::~LibraryUI() {}
 void LibraryUI::run() {
     int action_choice = 0;
     while (1)

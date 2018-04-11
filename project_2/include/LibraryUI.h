@@ -13,7 +13,7 @@
 #include "Library.h"
 
 class LibraryUI {
-      Library* library_;
+      Library& library_;
       void show();
       void showByName();
       void addItem();
@@ -21,7 +21,7 @@ class LibraryUI {
       void increaseCopies();
       void decreaseCopies();
     public:
-        LibraryUI(Library* lib);
+        LibraryUI(Library& lib);
         ~LibraryUI();
         void run();
 };
