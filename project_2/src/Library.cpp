@@ -17,7 +17,6 @@ Library::Library() {
 Library::~Library() {
     for(auto it = items_list_.begin(); it != items_list_.end(); it++) {
         delete (*it);
-        std::cout<<"Usuwam w desktruktorze"<<std::endl;
     }
 }
 
