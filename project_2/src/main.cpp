@@ -14,7 +14,7 @@ using namespace std;
 int main()
 {
     Library lib = Library();
-    LibraryUI ui = LibraryUI(Library);
+    LibraryUI ui = LibraryUI(lib);
     ui.run();
     return 0;
 }
