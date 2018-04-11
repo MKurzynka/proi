@@ -8,7 +8,6 @@
 
 #include "Library.h"
 #include <iostream>
-#include <algorithm>
 
 Library::Library() {
    id=0;
