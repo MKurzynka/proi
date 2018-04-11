@@ -22,8 +22,8 @@ class Library {
         ~Library();
         template <typename T> int addItem(std::string name, std::string author, int num_of_copies, T num_of_pages) // adds a new item to the list with a specific type
         {
-            id++;
-            Item<T>* new_item = new Item<T>(id, name, author,num_of_copies, num_of_pages);
+            id_++;
+            Item<T>* new_item = new Item<T>(id_, name, author,num_of_copies, num_of_pages);
             items_list_.push_back(new_item);
             return id_;
         }
