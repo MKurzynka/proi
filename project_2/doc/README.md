@@ -13,6 +13,6 @@ Example:
 ### template class Item [#](https://github.com/MacSzu/proi/blob/master/project_2/include/Item.h)
 The `template class Item` is enabling programmer to define a type of property `num_of_pages`.  For short writings the type may be a `one-byte unsigned int (unsigned char)` and for longer ones `unsigned short int`.
 
-This class inherits the ItemInterface class. Because of it, it is necessary to define all vritual methods from the ItemInterface class. 
+This class inherits from the ItemInterface class. Because of it, it is necessary to define all vritual methods from the ItemInterface class. 
 
 The function `virtual void show(std::ostream& stream) const = 0` is an example.  It cannot be defined in the ItemInterface class, because it shows all properties of an item, including variable `num_of_pages` (it has a type specifed by a programmer and is declared in the template class Item, not in the ItemInterface). 
