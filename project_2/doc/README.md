@@ -1,15 +1,15 @@
 ## Project 2: Library 
 
 ### class ItemInterface [#](https://github.com/MacSzu/proi/blob/master/project_2/include/ItemInterface.h)
-The [ItemInterface class](https://github.com/MacSzu/proi/blob/master/project_2/include/ItemInterface.h) is an abstract base class created in order to store multiple types of a  [template class Item](https://github.com/MacSzu/proi/blob/master/project_2/include/Item.h) in a single vector.  Such problem is described in [StackOverflow thread](https://stackoverflow.com/questions/16527673/c-one-stdvector-containing-template-class-of-multiple-types).
+The [ItemInterface class](https://github.com/MacSzu/proi/blob/master/project_2/include/ItemInterface.h) is an abstract base class created in order to store multiple types of a  [template class Item](https://github.com/MacSzu/proi/blob/master/project_2/include/Item.h) in a single vector.  You can read about this problem in [StackOverflow thread](https://stackoverflow.com/questions/16527673/c-one-stdvector-containing-template-class-of-multiple-types).
 
-It implements all necessary  properties and methods a library item should have. However,  methods, which use a specific type in the template class, are declared as virtual one and equal 0. 
+This class implements all necessary  properties and methods a library item should have. However,  methods, which use a specific type in the template class, are declared as virtual one and equal 0. 
 
 Example:
 
     virtual void show(std::ostream& stream) const = 0; // shows all properties of the item
 
-**The ItemInterface class does not implement such methods. They had to be defined in the Item class.**
+**Such methods had to be defined in the Item class.**
 
 ### template class Item [#](https://github.com/MacSzu/proi/blob/master/project_2/include/Item.h)
 The `template class Item` is enabling programmer to define a type of property `num_of_pages`.  For short writings the type may be a `one-byte unsigned int (unsigned char)` and for longer ones `unsigned short int`.
