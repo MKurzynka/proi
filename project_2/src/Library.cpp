@@ -18,9 +18,10 @@ Library::~Library() {
 }
 
 void Library::removeItem(int id) {
-    std::vector<ItemInterface *>::iterator index = findItemIteratorByID(id);
-    if (index != items_list_.end()) { // index == .end() means the element was not found
-        items_list_.erase(index);
+    std::vector<ItemInterface *>::iterator it = findItemIteratorByID(id);
+    if (it != items_list_.end()) { // it == .end() means the element was not found
+        delete (*it);
+        items_list_.erase(it);
     }
 }
 
